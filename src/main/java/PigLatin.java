@@ -39,11 +39,11 @@ public class PigLatin {
     return sWord + "ay";
   } else if(findFirstVowel(sWord)==0) {
     return sWord + "way";
-  } else if(findFirstVowel(sWord)!=-1) {
-    return sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
   } else if(sWord.startsWith("qu")) {
     return sWord.substring(2,sWord.length())+"quay";
-  }  else {
+  } else if(findFirstVowel(sWord)!=-1) {
+    return sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
+  } else {
     return "ERROR!";
   }
   }
